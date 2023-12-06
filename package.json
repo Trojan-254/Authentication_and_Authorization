@@ -1,0 +1,24 @@
+{
+  "name": "authentication_and_authorization",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Samwuel Simiyu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "Authentication_and_Authorization"
+  },
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.2",
+    "nodemon": "^3.0.2",
+    "passport": "^0.7.0",
+    "passport-local-mongoose": "^8.0.0"
+  }
+}

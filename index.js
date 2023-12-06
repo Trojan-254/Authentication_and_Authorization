@@ -1,0 +1,25 @@
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const dotenv = require('dotenv')
+dotenv.config();
+const authRouter = require('./routes/auth')
+
+port = 3000
+
+// connect to a database
+mongoose
+ .connect(process.env.MONGO_URL)
+ .then(() => console.log("DB Connection was succesfull.."))
+ .catch((err) => {
+    console.log(err); 
+});
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api/auth', authRouter)
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Backend server is running!.....");
+    console.log(`Listening on port ${port}...`);
+})
